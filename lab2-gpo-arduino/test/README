@@ -8,9 +8,9 @@
    | **DDRB** | **PORTB** | **Direction** | **Internal pull-up resistor** | **Description** |
    | :-: | :-: | :-: | :-: | :-- |
    | 0 | 0 | input | no | Tri-state, high-impedance |
-   | 0 | 1 | | | |
-   | 1 | 0 | | | |
-   | 1 | 1 | | | |
+   | 0 | 1 |input |yes |pull-up activated|
+   | 1 | 0 | output|no |low level |
+   | 1 | 1 | output|no |high level |
 
 ### GPIO library
 
@@ -18,9 +18,9 @@
 
    | **Version** | **Size [B]** |
    | :-- | :-: |
-   | Ver. 1: Arduino-style |  |
-   | Ver. 2: Registers |  |
-   | Ver. 3: Library functions |  |
+   | Ver. 1: Arduino-style |480  |
+   | Ver. 2: Registers |182  |
+   | Ver. 3: Library functions |182  |
 
 ### Traffic light
 
