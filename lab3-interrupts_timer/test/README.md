@@ -1,4 +1,4 @@
-# Lab 3: YOUR_FIRSTNAME LASTNAME
+# Lab 3: NABILA HENDY MNOUAR
 
 ### Overflow times
 
@@ -20,6 +20,9 @@
     * @note  t_OVF = 1/F_CPU * prescaler * 2^n where n = 8, F_CPU = 16 MHz
     */
    // WRITE YOUR CODE HERE
+#define TIM2_overflow_16ms()   TCCROB &= ~ (1<<CS01) ; TCCROB | = (1<<CS02) | (1<<CS00);
+#define TIM2 overflow interrupt enable() TIMSK2|=(1<<TOIE0);
+#define TIM2 overlow interrupt disable() TIMSKO &= ~(1<<TOIE);
 
 Counter 0:  TCNT0, OCR0A, OCR0B, TIFR0, TIMSK0 // 
 Counter 2:  TCNT2, OCR2A, OCR2B, TIFR2, TIMSK2 // 
