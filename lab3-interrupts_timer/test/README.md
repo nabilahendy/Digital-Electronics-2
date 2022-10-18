@@ -8,7 +8,7 @@
    | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
    | Timer/Counter0 | 8  | 16u | 128u | -- | | -- | | |
    | Timer/Counter1 | 16 |     |      | -- | | -- | | |
-   | Timer/Counter2 | 8  |     |      |    | |    | | |
+   | Timer/Counter2 | 8  |  16u   | 128u     |    | |    | | |
 
 ### Interrupts
 
