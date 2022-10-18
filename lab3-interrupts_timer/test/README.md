@@ -9,6 +9,9 @@
    | Timer/Counter0 | 8  | 16u | 128u | -- |1024u | -- |4096u | |
    | Timer/Counter1 | 16 |  2048u   |    4096u  | -- | | -- | | |
    | Timer/Counter2 | 8  |  16u   | 128u     | 512u   |1024u |4096u    | | |
+   
+   (using the formula ![timer_overflow](https://user-images.githubusercontent.com/115028247/196499008-f2e27c10-c0d2-4f24-8f1e-98d7aebf3166.png))
+
 
 ### Interrupts
 
