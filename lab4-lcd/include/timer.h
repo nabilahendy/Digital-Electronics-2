@@ -60,44 +60,40 @@
 
 
 /**
-* @name Definitions for 8-bit Timer/Counter®
-* @note t OVF = 1/F CPU * prescaler
-* 2^n where n = 8, F CPU = 16 MHZ
-*/
-
-// stop
-#define TIM0 stop() TCCROB &= ~ ( (1<<CS02) | (1<<CS01) | (1<<CS00)) :
-//overflow Ams
-#define TIM0_overflow_16ms()  TCCROB &= ~ (1<<CS01) ; TCCROB | = (1<<CS02) | (1<<CS00);
-#define TIMe overflow interrupt enable() TIMSKO|= (1<<TOIEO);
-#define TIM1 overflow interrupt disable() TIMSKO &= ~(1<<TOIE);
-
-#define TIM2_overflow_16ms()   TCCROB &= ~ (1<<CS01) ; TCCROB | = (1<<CS02) | (1<<CS00);
-#define TIM2 overflow interrupt enable() TIMSK2|=(1<<TOIE0);
-#define TIM2 overlow interrupt disable() TIMSKO &= ~(1<<TOIE);
-/**
-* @name • Definitions for 8-bit Timer/Counter2
-* @note t OVF = 1/F CPU * prescaler * 2^n where n = 8, F_CPU = 16 MHZ
-*/
-// WRITE YOUR CODE HERE
-
-
-/**
  * @name  Definitions for 8-bit Timer/Counter0
  * @note  t_OVF = 1/F_CPU * prescaler * 2^n where n = 8, F_CPU = 16 MHz
  */
 // WRITE YOUR CODE HERE
-/*#define TIM0_stop()  TCCR0A &= ~((1<<COM0A1) | (1<<COM0A0) | (1<<COM0B1) | (1<<COM0B0) | (1<<WGM01) | (1<<WGM00) |);
-/** @brief Set overflow 4ms, prescaler 001 --> 1 */
-//#define TIM0_overflow_16ms()   TCCR0B &= ~((1<<FOC0A) | (1<<FOC0B) | (1<<WGM02) | (1<<CS02) | (1<<CS01) | (1<<CS00) | ); TCCR1B |= (1<<CS10);
-/* @brief Set overflow 33ms, prescaler 010 --> 8 */
-//#define TIM0_overflow_interrupt_enable() TIMSK1 |= (1<<TOIE0);
+/** @brief Stop timer, prescaler 000 --> STOP */
+#define TIM0_stop()  TCCR0B &= ~((1<<CS02) | (1<<CS01) | (1<<CS00));
+
+// #define TIM0_overflow_16us()  ...
+// #define TIM0_overflow_128us()  ...
+// #define TIM0_overflow_1ms()  ...
+// #define TIM0_overflow_4ms()  ...
+
+/** @brief Set overflow 16ms, prescaler // 101 --> 1024 */
+#define TIM0_overflow_16ms()  TCCR0B &= ~(1<<CS01); TCCR0B |= (1<<CS02) | (1<<CS00);
+
+/** @brief Enable overflow interrupt, 1 --> enable */
+#define TIM0_overflow_interrupt_enable()  TIMSK0 |= (1<<TOIE0);
+/** @brief Disable overflow interrupt, 0 --> disable */
+#define TIM0_overflow_interrupt_disable() TIMSK0 &= ~(1<<TOIE0);
+
 
 /**
  * @name  Definitions for 8-bit Timer/Counter2
  * @note  t_OVF = 1/F_CPU * prescaler * 2^n where n = 8, F_CPU = 16 MHz
  */
-// WRITE YOUR CODE HERE
+/** @brief Stop timer, prescaler 000 --> STOP */
+#define TIM2_stop()  TCCR2B &= ~((1<<CS22) | (1<<CS21) | (1<<CS20));
+/** @brief Set overflow 16ms, prescaler // 111 --> 1024 */
+#define TIM2_overflow_16ms()  TCCR2B |= (1<<CS22) | (1<<CS21) | (1<<CS20);
+
+/** @brief Enable overflow interrupt, 1 --> enable */
+#define TIM2_overflow_interrupt_enable()  TIMSK2 |= (1<<TOIE2);
+/** @brief Disable overflow interrupt, 0 --> disable */
+#define TIM2_overflow_interrupt_disable() TIMSK2 &= ~(1<<TOIE2);
 
 
 /** @} */
