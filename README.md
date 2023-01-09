@@ -50,3 +50,12 @@ In the review, we make a little test of 10 questions about everything that we sa
 
 
 ### WEEK 2
+
+
+
+### WEEK 3
+
+
+
+### BIBLIOGRAPHY
+What Is TinyML? - Technical Articles (allaboutcircuits.com)
