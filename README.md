@@ -33,3 +33,20 @@ With this course, we learned that tinyML can be classified inte three domains: v
 As in all the points of this course, at the end of these, we have a small questionnaire about the information we saw. In the next picture, there is the mark obtained:
 
 ![image](https://user-images.githubusercontent.com/115028247/211308850-bc0cd336-b29c-470e-9304-6b66323b499f.png)
+
+In this point, we learn about how Machines can learn to recognize gestures like left to right, up and down and moving in circles a device. We see an example of a data recollecting with a mobile phone, connecting this one to smarphone.edgeimpulse.com. They show us how to start sampling the information of the moves that we do with the phone, repeating this process until they 200 seconds of data. Once they have the data for left to right, up and down and circles moves, we can see how it creates a model that can recognize all these different motions. 
+In the next picture, we can see how the training set works:
+
+![image](https://user-images.githubusercontent.com/115028247/211356569-96fb841a-8182-4db3-9b25-7f1390c5c331.png)
+
+Moving to the extraction data, we have to know that this is one of the most important things that we can do with machine learning. The point is about figuring out how to extract data and send it to our model for training and interference. 
+Its interesting to know the definition they give to the “Feature”, and this is explained like  an individual measurable property of a phenomen being observed. We will use this features and associated labels to train the device or model. 
+
+### REVIEW
+In the review, we make a little test of 10 questions about everything that we saw in the other points above:
+
+![image](https://user-images.githubusercontent.com/115028247/211356969-214d3fa2-cdef-4b7a-806e-df6c8e5b52e6.png)
+
+
+
+### WEEK 2
