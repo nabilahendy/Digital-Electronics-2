@@ -62,6 +62,18 @@ In the next picture, we are going to see one of the most interesting things, in 
 
 To build an artificial network, there is something called “Recipe” composed of the input, the comparation unit (a linear funciton and an activation fucntion) and the output. 
 
+Fort he model training in network, there is some interesting concets that we should know about: one of them is the activation function, this one is requires so that the node does not act as a regression función. We will explain it better:
+The next picture shows a neural network architecture, it is a simple three layer neural network. In the course, they explain use that each layer consists of a set of fully connected nodes. The first layer consists of 20 nodes and the input are stored as a 33 element array. Each element is copied to each node in the first layer, and each node then performs the clculations on the inputs, this means that there is a multiplication for each input, adding a constant (bias term) to finally summing them. The sum goes through a non-linear funciton to give each node its decisión making ability. Then, this output is copied to every node in the second layer. This process it is going to repeat all over again, but with different set of nodes.
+
+![image](https://user-images.githubusercontent.com/115028247/212359818-93ed0d9b-2789-4cc9-9ba6-d80977e905df.png)
+
+![image](https://user-images.githubusercontent.com/115028247/212359845-22a74576-48bd-481e-aa99-e934bf3ce173.png)
+
+Reviewing the information above, a single node in a neural network start with the action of multiplying each input value by a weight, then sums the products of step 1, then adds a bias term to the sum computed in step 2 to finally aply an activation funciton to the sum from step 3 to produce a single value output.
+
+Another interesting concept it is de “Back propagation”, this is a widely used algorithm for training feedforward artificial neural networks. This term, refers only to the algorithm for computing the gradient, and not how the gradient is used. 
+
+
 
 
 ### WEEK 3
@@ -71,3 +83,4 @@ To build an artificial network, there is something called “Recipe” composed 
 ### BIBLIOGRAPHY
 - What Is TinyML? - Technical Articles (allaboutcircuits.com)
 - https://blog.ovhcloud.com/what-does-training-neural-networks-mean/
+- https://en.wikipedia.org/wiki/Backpropagation
