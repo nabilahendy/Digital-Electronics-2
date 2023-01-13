@@ -51,6 +51,17 @@ In the review, we make a little test of 10 questions about everything that we sa
 
 ### WEEK 2
 
+As we can see in the next picture, the resulto of a clculation, that we are going to call “Output”, is the re-transmitted data whose signal strength is adjusted by neuronal weights:
+
+![image](https://user-images.githubusercontent.com/115028247/212354309-0ba04ca7-0321-4a5d-958e-24cbe3fe6b73.png)
+
+This artificial neural networks, are models with hidden layers. Every layer is densley connected with the previous and the next one. 
+In the next picture, we are going to see one of the most interesting things, in my opinión, about neural networks, and it’s the comparation between an artificial network and a biological one:
+
+![image](https://user-images.githubusercontent.com/115028247/212354367-517d274e-4bb8-48bb-a957-9e755121270c.png)
+
+To build an artificial network, there is something called “Recipe” composed of the input, the comparation unit (a linear funciton and an activation fucntion) and the output. 
+
 
 
 ### WEEK 3
@@ -58,4 +69,5 @@ In the review, we make a little test of 10 questions about everything that we sa
 
 
 ### BIBLIOGRAPHY
-What Is TinyML? - Technical Articles (allaboutcircuits.com)
+- What Is TinyML? - Technical Articles (allaboutcircuits.com)
+- https://blog.ovhcloud.com/what-does-training-neural-networks-mean/
