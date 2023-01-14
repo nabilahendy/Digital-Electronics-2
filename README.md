@@ -73,7 +73,30 @@ Reviewing the information above, a single node in a neural network start with th
 
 Another interesting concept it is de “Back propagation”, this is a widely used algorithm for training feedforward artificial neural networks. This term, refers only to the algorithm for computing the gradient, and not how the gradient is used. 
 
+We learned, that evaluating a model is one of the most important things, since it help us determine if the model that we are building, is capable of meet our needs. 
+One of the most useful evaluation tools is the confusion matrix. Is a specifica table layout that allows visualization of the performance of an algorithm, normally a supervised learning. The confusion matrix tabulates al lof the correct and incorrect responses a model produces given a set of data. 
+For example, we have a sample of 12 individuals, 8 of them are positive in covid and 4 of them are negative. Positive individuals belongs to class 1 and negativo individuals belongs to class 0. So now we have the next image: 
+![image](https://user-images.githubusercontent.com/115028247/212484766-7741201c-8f98-453e-acc3-1b1d2578c11b.png)
 
+We asume that we have a classifier that distinguishes between positive and negative individuals, so we can take the 12 of them and run them through the classifier. This one will make 9 accurate prediction. But the interesting thing it is that the classifier predicts 2 individuals that are fake negative (1 and 2) and one person with fake positive (9):
+
+![image](https://user-images.githubusercontent.com/115028247/212484783-250ceaa5-3ba1-4ce9-9bb5-209a2b087583.png)
+
+Comparing the actual classification with the predicted one, we can notice 4 different outcoums: 
+1.	The actual classification is positive and so it is the predicted one (1,1)
+2.	The actual classification is positive and the predicted one is negative (1,0)
+3.	The actual classification is negative and so it is the predicted one (0,0)
+4.	The actual classification is negative and the predicted one is positive (0,1)
+Then, we can perform the comparison between actual and predicted classifications, adding information to the table: 
+
+![image](https://user-images.githubusercontent.com/115028247/212484804-08b51184-b1a7-41f4-9106-acedd570f1fa.png)
+
+(the green results are the correct one)
+The template for any binary confusión matrix uses the four results discussed above along with the positive and negative classifications. Then the four outcomes can be formulated as a  2x2 confusion matrix:
+
+![image](https://user-images.githubusercontent.com/115028247/212484812-4c527ac7-55c2-405e-8a5d-b3a17c284b08.png)
+
+In this confusión matrix, 8 of the simples with positive in covid, we know that the system will judge that 2 were fake positive, and for the 4 samples with negative in covid, it will predict that 1 is fake negative. The correct predictions are located in the green highlighted, and the error with red. By summing up the 2 rows of the confusión matrix, one can also deduce the total number of positive and negative simples in the original dataset. So we will have P= TP + FN and N= FP + TN.
 
 
 ### WEEK 3
