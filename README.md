@@ -98,6 +98,15 @@ The template for any binary confusión matrix uses the four results discussed ab
 
 In this confusión matrix, 8 of the simples with positive in covid, we know that the system will judge that 2 were fake positive, and for the 4 samples with negative in covid, it will predict that 1 is fake negative. The correct predictions are located in the green highlighted, and the error with red. By summing up the 2 rows of the confusión matrix, one can also deduce the total number of positive and negative simples in the original dataset. So we will have P= TP + FN and N= FP + TN.
 
+Before passing to the Project: Motion Detection, it would be nice to explain, what Anomaly detection is: we can define it as a process of identifying unexpected items or events in data sets, wich differ from the norm. Anomaly detection has two bsic assumptions: anomalies are rare in data and their features differ from the normal instances significantly.
+
+### PROJECT: Motion Detection
+
+In this project we will employ all the concepts that i spoked about above. We will collect data, perfoming feature extration, training a model and deploying that model to an embedded system. Everything with a smartphone that will be our hardware.
+
+
+
+
 
 ### WEEK 3
 
@@ -108,3 +117,4 @@ In this confusión matrix, 8 of the simples with positive in covid, we know that
 - https://blog.ovhcloud.com/what-does-training-neural-networks-mean/
 - https://en.wikipedia.org/wiki/Backpropagation
 - https://en.wikipedia.org/wiki/Confusion_matrix
+- https://towardsdatascience.com/anomaly-detection-for-dummies-15f148e559c1
