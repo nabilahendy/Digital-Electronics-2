@@ -84,3 +84,4 @@ Another interesting concept it is de “Back propagation”, this is a widely us
 - What Is TinyML? - Technical Articles (allaboutcircuits.com)
 - https://blog.ovhcloud.com/what-does-training-neural-networks-mean/
 - https://en.wikipedia.org/wiki/Backpropagation
+- https://en.wikipedia.org/wiki/Confusion_matrix
