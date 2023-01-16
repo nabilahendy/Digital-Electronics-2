@@ -98,17 +98,20 @@ The template for any binary confusión matrix uses the four results discussed ab
 
 In this confusión matrix, 8 of the simples with positive in covid, we know that the system will judge that 2 were fake positive, and for the 4 samples with negative in covid, it will predict that 1 is fake negative. The correct predictions are located in the green highlighted, and the error with red. By summing up the 2 rows of the confusión matrix, one can also deduce the total number of positive and negative simples in the original dataset. So we will have P= TP + FN and N= FP + TN.
 
-Before passing to the Project: Motion Detection, it would be nice to explain, what Anomaly detection is: we can define it as a process of identifying unexpected items or events in data sets, wich differ from the norm. Anomaly detection has two bsic assumptions: anomalies are rare in data and their features differ from the normal instances significantly.
-
-### PROJECT: Motion Detection
-
-In this project we will employ all the concepts that i spoked about above. We will collect data, perfoming feature extration, training a model and deploying that model to an embedded system. Everything with a smartphone that will be our hardware.
+IT also would be nice to explain, what Anomaly detection is: we can define it as a process of identifying unexpected items or events in data sets, wich differ from the norm. Anomaly detection has two bsic assumptions: anomalies are rare in data and their features differ from the normal instances significantly.
 
 
 
+### WEEK 3-
 
 
-### WEEK 3
+
+### PROJECT: Sound Classification
+The idea of this project is to create a speech recognition system. We will start with a simple, pre-made dataset, add our own trget sound, and build a classifier for those sounds. 
+The required hardware for collecting data should have access to a recording device. Thats why we are going to use our own smartphone. As we do not have access to Arduino, we won't be using it. 
+With Edge Impulse, we are going to start pre-mading the dataset. First of all, we upload the 480 voice archives: 
+
+![image](https://user-images.githubusercontent.com/115028247/212745376-6d54cfc9-0536-4126-96b3-75bd4c92236f.png)
 
 
 
