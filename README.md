@@ -98,13 +98,21 @@ The template for any binary confusión matrix uses the four results discussed ab
 
 In this confusión matrix, 8 of the simples with positive in covid, we know that the system will judge that 2 were fake positive, and for the 4 samples with negative in covid, it will predict that 1 is fake negative. The correct predictions are located in the green highlighted, and the error with red. By summing up the 2 rows of the confusión matrix, one can also deduce the total number of positive and negative simples in the original dataset. So we will have P= TP + FN and N= FP + TN.
 
-IT also would be nice to explain, what Anomaly detection is: we can define it as a process of identifying unexpected items or events in data sets, wich differ from the norm. Anomaly detection has two bsic assumptions: anomalies are rare in data and their features differ from the normal instances significantly.
+IT also would be nice to explain, what Anomaly detection is: we can define it as a process of identifying unexpected items or events in data sets, wich differ from the norm. Anomaly detection has two basic assumptions: anomalies are rare in data and their features differ from the normal instances significantly.
 
 
 
 ### WEEK 3-
 
+We can define the classification of audio as a useful application of machine learning. The are lot’s of examples, but one of the most interesting  is  the home smart speaker. We can highlight the Amazon Echo internally a microcontroller, which after listening to the keyword Alexa,  starts to stream the audio to the servers where much more complicated machine  learning algorithm process the user request.
 
+If we want to create a model that recognize our keywords, we have to generate some features: volume, position... Joseph Fourier in 1800's developed a technique wich is based on that any repeating signal can be represented by an infintite sum of sine and cosine waves at different frequencies. This is what nowadays we call Fourier Transform, wich allows us to break any signal into its frequency components. Every audio record consists of a series of equally spaced samples rather than a continous line, and this is why we need to use discrete Fourier Transform. 
+
+Another important concept, it's Convolutional Neural Network, and this is a class of artificial neural network applied to analyze visual imagery. They are based on the shared-weight architecture of te convolution kernels or filters that slide along input features and provide translation-equivariant responses also known as feature maps. They are regularized versions of multilayer perceptons, wich means fully conected networks, that is, each neuron in one layer is connected to ll neurons in the next one. This convolution layers contain filters whose parameters are updated just like the parameters in regular neural network node. In another words, they are trainable using black propagation. 
+
+![image](https://user-images.githubusercontent.com/115028247/212993260-2d5bdf11-a3ea-48ea-9533-71d9cea4d0da.png)
+
+In the next point, we are going to put all this concepts and some more into practice.
 
 ### PROJECT: Sound Classification
 The idea of this project is to create a speech recognition system. We will start with a simple, pre-made dataset, add our own trget sound, and build a classifier for those sounds. 
@@ -113,6 +121,28 @@ With Edge Impulse, we are going to start pre-mading the dataset. First of all, w
 
 ![image](https://user-images.githubusercontent.com/115028247/212745376-6d54cfc9-0536-4126-96b3-75bd4c92236f.png)
 
+Once we have our data uploaded, we can see it in our Data acquisition:
+
+![image](https://user-images.githubusercontent.com/115028247/212995852-af731a48-53c9-489f-a342-9e5ced9d0d00.png)
+
+
+Moving to the Feature Extraction, we create an Audio (MFCC) and then a Neural Network (Keras) learning blocks:
+
+![image](https://user-images.githubusercontent.com/115028247/212995824-c395276b-3e19-4532-8241-6f6bf3d552eb.png)
+
+After this, we go to the MFCC page and we generate features. This will show us how our audio samples are convertted into spectrograms. As we can see in our result, our features are separated very well. This will make it more easier if we want to create an accurate model:  
+
+![image](https://user-images.githubusercontent.com/115028247/212996157-b6137f18-7ca7-449f-8fad-4de39ecdc68c.png)
+
+In the Classifier page, we start training tho see de Confusion Matrix (a concept that we talked about earlier) of the validation data. 
+ 
+Finally, after all this steps, we should test the model and classify all of the test data to then try it with our smartphone and see if it can recognize the sound.
+
+
+
+### CONCLUSION
+
+With this course, we learned that Machine Learning it is a very broad subject, full of mathematical and engineering concepts that must be controlled perfectly, that also will be in a constant evolution, since we see new concepts and methods everyday. Wich means that we will never stop learning about it. 
 
 
 ### BIBLIOGRAPHY
@@ -121,3 +151,4 @@ With Edge Impulse, we are going to start pre-mading the dataset. First of all, w
 - https://en.wikipedia.org/wiki/Backpropagation
 - https://en.wikipedia.org/wiki/Confusion_matrix
 - https://towardsdatascience.com/anomaly-detection-for-dummies-15f148e559c1
+- https://en.wikipedia.org/wiki/Convolutional_neural_network
